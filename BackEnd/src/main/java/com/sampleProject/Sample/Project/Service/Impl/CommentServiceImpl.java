@@ -8,6 +8,9 @@ import com.sampleProject.Sample.Project.Service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -20,5 +23,14 @@ public class CommentServiceImpl implements CommentService {
         Comment comment = CommentMapper.toComment(commentDTO);
         Comment savedComment = commentRepository.save(comment);
         return CommentMapper.toCommentDTO(savedComment);
+    }
+
+    @Override
+    public List<CommentDTO> getCommentsById(int id) {
+        List<Comment> comments = commentRepository.findByPostId(id);
+        return comments.stream()
+                .map(CommentMapper::toCommentDTO)
+                .collect(Collectors.toList());
+
     }
 }

@@ -1,5 +1,5 @@
 export const POST_COLORS = [
-      '#3B82F6', 
-      '#F87171', 
-      '#4ADE80'
+      '#0000FF', 
+      '#FFFF00', 
+      '#FF0000'
   ];

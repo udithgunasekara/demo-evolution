@@ -11,10 +11,10 @@ const COMMENT_URL = '/comment'
 export const createComment = () => axios.post(`${BaseURL}${COMMENT_URL}`)
 
 export const createPost = (postData: Post) => {
-      return axios.post(`${BaseURL}${POST_URL}`, postData);};
+      return axios.post<Post>(`${BaseURL}${POST_URL}`, postData);};
 
 export const getAllPosts = () => {
-      return axios.get(`${BaseURL}${POST_URL}`); };
+      return axios.get<Post[]>(`${BaseURL}${POST_URL}`); };
 
 
 export const corsTest = () => axios.get(`${BaseURL}${API_URL}/test`);
