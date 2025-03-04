@@ -23,10 +23,6 @@ public class Post {
     private String description;
     private String titleColor;
 
-//    //Post Relations
-//    @OneToMany(mappedBy = "post")
-//    private List<Comment> comments = new ArrayList<>();
-
     public int getId() {
         return id;
     }
@@ -39,9 +35,6 @@ public class Post {
         return description;
     }
 
-//    public List<Comment> getComments() {
-//        return comments;
-//    }
 
     public void setId(int id) {
         this.id = id;
@@ -63,7 +56,4 @@ public class Post {
         this.titleColor = titleColor;
     }
 
-//    public void setComments(List<Comment> comments) {
-//        this.comments = comments;
-//    }
 }

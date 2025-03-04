@@ -20,9 +20,6 @@ public class Comment {
     private int id;
     private String comment;
     private int postId;
-//    @ManyToOne
-//    @JoinColumn(name = "post_id", nullable = false)
-//    private Post post;
 
 
     public int getId() {
@@ -33,9 +30,6 @@ public class Comment {
         return comment;
     }
 
-//    public Post getPost() {
-//        return post;
-//    }
 
     public void setId(int id) {
         this.id = id;
@@ -45,15 +39,10 @@ public class Comment {
         this.comment = comment;
     }
 
-//    public int getPostId() {
-//        return postId;
-//    }
+
 
     public void setPostId(int postId) {
         this.postId = postId;
     }
-//
-//    public void setPost(Post post) {
-//        this.post = post;
-//    }
+
 }
