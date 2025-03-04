@@ -1,35 +1,4 @@
-Installation
-First, navigate to the project directory:
+Verify Cross-Origin Resource Sharing (CORS) settings:
 
-bash
-Copy
-Edit
-cd frontend/socialmedia
-Then, install the required Node modules:
-
-nginx
-Copy
-Edit
-npm install
-Building
-To build the project, run:
-
-arduino
-Copy
-Edit
-npm run build
-Starting the Server (Development Mode)
-To start the server in development mode, use:
-
-arduino
-Copy
-Edit
-npm run dev
-Starting the Server
-To start the server, run:
-
-arduino
-Copy
-Edit
-npm run dev
-After starting the server, open your web browser and go to http://localhost:5173/ to view the application.
+Ensure the backend CORS configuration matches the frontend project. If necessary, update the CorsConfig file (Config > CorsConfig):
+"http://localhost:5173", "http://127.0.0.1:5173"
