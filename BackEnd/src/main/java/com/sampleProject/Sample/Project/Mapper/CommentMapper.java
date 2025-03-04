@@ -9,7 +9,7 @@ public class CommentMapper {
         CommentDTO commentDTO = new CommentDTO();
         commentDTO.setId(comment.getId());
         commentDTO.setComment(comment.getComment());
-        commentDTO.setPostId(comment.getPost().getId());
+        commentDTO.setPostId(comment.getId());
 
         return commentDTO;
     }
@@ -18,6 +18,7 @@ public class CommentMapper {
         Comment comment = new Comment();
         comment.setId(commentDTO.getId());
         comment.setComment(commentDTO.getComment());
+        comment.setPostId(commentDTO.getPostId());
         return comment;
     }
 

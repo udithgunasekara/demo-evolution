@@ -19,10 +19,10 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String comment;
-
-    @ManyToOne
-    @JoinColumn(name = "post_id", nullable = false)
-    private Post post;
+    private int postId;
+//    @ManyToOne
+//    @JoinColumn(name = "post_id", nullable = false)
+//    private Post post;
 
 
     public int getId() {
@@ -33,9 +33,9 @@ public class Comment {
         return comment;
     }
 
-    public Post getPost() {
-        return post;
-    }
+//    public Post getPost() {
+//        return post;
+//    }
 
     public void setId(int id) {
         this.id = id;
@@ -45,7 +45,15 @@ public class Comment {
         this.comment = comment;
     }
 
-    public void setPost(Post post) {
-        this.post = post;
+//    public int getPostId() {
+//        return postId;
+//    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
+//
+//    public void setPost(Post post) {
+//        this.post = post;
+//    }
 }

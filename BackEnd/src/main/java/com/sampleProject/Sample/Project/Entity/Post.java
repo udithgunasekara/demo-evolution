@@ -22,9 +22,9 @@ public class Post {
     private String title;
     private String description;
 
-    //Post Relations
-    @OneToMany(mappedBy = "post")
-    private List<Comment> comments = new ArrayList<>();
+//    //Post Relations
+//    @OneToMany(mappedBy = "post")
+//    private List<Comment> comments = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -38,9 +38,9 @@ public class Post {
         return description;
     }
 
-    public List<Comment> getComments() {
-        return comments;
-    }
+//    public List<Comment> getComments() {
+//        return comments;
+//    }
 
     public void setId(int id) {
         this.id = id;
@@ -54,7 +54,7 @@ public class Post {
         this.description = description;
     }
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
+//    public void setComments(List<Comment> comments) {
+//        this.comments = comments;
+//    }
 }
