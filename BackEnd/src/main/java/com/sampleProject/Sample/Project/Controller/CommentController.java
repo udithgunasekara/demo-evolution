@@ -24,7 +24,7 @@ public class CommentController {
         return new ResponseEntity<>(saveComment, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<List<CommentDTO>> getCommentsById(@PathVariable int id) {
         List<CommentDTO> comments = commentService.getCommentsById(id);
         return new ResponseEntity<>(comments, HttpStatus.OK);
