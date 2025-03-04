@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Service
 public class PostServiceImpl implements PostService {
 
@@ -19,5 +21,11 @@ public class PostServiceImpl implements PostService {
         Post post = PostMapper.toPost(postDTO);
         Post savedPost = postRepository.save(post);
         return PostMapper.toPostDTO(savedPost);
+    }
+
+    @Override
+    public List<PostDTO> getAllPosts() {
+        List<Post> posts = postRepository.findAll();
+        return posts.stream().map(PostMapper::toPostDTO).toList();
     }
 }

@@ -11,6 +11,7 @@ public class PostMapper {
         postDTO.setId(post.getId());
         postDTO.setTitle(post.getTitle());
         postDTO.setDescription(post.getDescription());
+        postDTO.setTitleColor(post.getTitleColor());
         return postDTO;
     }
 
@@ -20,6 +21,7 @@ public class PostMapper {
         post.setId(postDTO.getId());
         post.setTitle(postDTO.getTitle());
         post.setDescription(postDTO.getDescription());
+        post.setTitleColor(postDTO.getTitleColor());
         return post;
     }
 

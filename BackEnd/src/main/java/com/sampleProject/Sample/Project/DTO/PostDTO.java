@@ -15,6 +15,7 @@ public class PostDTO {
     private int id;
     private String title;
     private String description;
+    private String titleColor;
 
     public int getId() {
         return id;
@@ -38,5 +39,13 @@ public class PostDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTitleColor() {
+        return titleColor;
+    }
+
+    public void setTitleColor(String titleColor) {
+        this.titleColor = titleColor;
     }
 }

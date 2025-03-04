@@ -1,9 +1,20 @@
 import axios from "axios";
+import { Post } from "../types";
 
-// const BaseURL2 = process.env.VITE_BASE_URL
+const BaseURL = import.meta.env.VITE_BASE_URL;
 
-const BaseURL = "http://localhost:8080"
 const API_URL = '/api';
+const POST_URL = '/post';
+const COMMENT_URL = '/comment'
+
+
+export const createComment = () => axios.post(`${BaseURL}${COMMENT_URL}`)
+
+export const createPost = (postData: Post) => {
+      return axios.post(`${BaseURL}${POST_URL}`, postData);};
+
+export const getAllPosts = () => {
+      return axios.get(`${BaseURL}${POST_URL}`); };
 
 
 export const corsTest = () => axios.get(`${BaseURL}${API_URL}/test`);

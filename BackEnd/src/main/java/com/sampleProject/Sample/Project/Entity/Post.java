@@ -21,6 +21,7 @@ public class Post {
     private int id;
     private String title;
     private String description;
+    private String titleColor;
 
 //    //Post Relations
 //    @OneToMany(mappedBy = "post")
@@ -52,6 +53,14 @@ public class Post {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTitleColor() {
+        return titleColor;
+    }
+
+    public void setTitleColor(String titleColor) {
+        this.titleColor = titleColor;
     }
 
 //    public void setComments(List<Comment> comments) {
