@@ -1,4 +1,30 @@
-Verify Cross-Origin Resource Sharing (CORS) settings:
+Sure! Here's the text rewritten:
 
-Ensure the backend CORS configuration matches the frontend project. If necessary, update the CorsConfig file (Config > CorsConfig):
-"http://localhost:5173", "http://127.0.0.1:5173"
+**Installation**  
+First, navigate to the project directory:
+
+```
+cd frontend
+```
+
+Then, install the required Node modules:
+
+```
+npm install
+```
+
+**Building**  
+To build the project, run:
+
+```
+npm run build
+```
+
+**Starting the Server (Development Mode)**  
+To start the server in development mode, use:
+
+```
+npm run dev
+```
+
+After starting the server, open your web browser and go to [http://localhost:5173/](http://localhost:5173/) to view the application.
