@@ -1,5 +1,3 @@
-Sure! Here's the text rewritten:
-
 **Installation**  
 First, navigate to the project directory:
 
